@@ -12,14 +12,6 @@ const styles = StyleSheet.create({
         fontSize:30,
         fontWeight:'700',
         padding:30
-    },
-    forgotContainer:{
-        alignSelf: 'flex-end'
-    },
-    forgotText:{
-        color:'#e5e0e0',
-        fontSize:19,
-        paddingRight:20
     }
 })
 export default styles

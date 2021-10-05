@@ -7,8 +7,9 @@ import Header from '../../components/Header'
 import ButtonIcon from '../../components/ButtonIcon'
 import styles from './style'
 import { colors } from '../../config/Color'
+import { Screen } from '../../Interface/index'
 
-const ForgotPassword = () => {
+const ForgotPassword:React.FC<Screen> = ({navigation}) => {
     const [email, setEmail] = useState<string>('')
     function hanleForgot() {
         
@@ -21,7 +22,7 @@ const ForgotPassword = () => {
                 <Input value={email} onChange={setEmail} placeholder="Email" secureTextEntry={false} />
                 <ButtonIcon iconSize={40} text="Send Link" color={colors.PRIMARY_COLOR} press={hanleForgot} position={false} />
             </Card>
-            <ButtonIcon iconSize={40} text="Back" color={colors.SECONDARY_COLOR} press={hanleForgot} position={false} />
+            <ButtonIcon iconSize={40} text="Back" color={colors.SECONDARY_COLOR} press={()=>navigation.navigate('Login')} position={true} />
         </View>
     )
 }

@@ -1,26 +1,20 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
-import Login from '../screen/Login'
-import Registration from '../screen/Registration'
-import ForgotPassword from '../screen/ForgotPassword'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import RecentGames from '../screen/RecentGames';
+import Game from '../screen/Game';
 export type RootStackParamList = {
-    Login: undefined;
-    ForgotPassword: undefined;
-    Registration: undefined
+    RecentGames: undefined;
+    Game: undefined;
 };
-const Stack = createStackNavigator<RootStackParamList>();
+const Main = createBottomTabNavigator<RootStackParamList>();
 const MainStackScreen: React.FC = () => {
     return (
-        <NavigationContainer>
-            <Stack.Navigator screenOptions={{
+            <Main.Navigator screenOptions={{
                 headerShown: false,
             }}>
-                <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Registration" component={Registration} />
-                <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-            </Stack.Navigator>
-        </NavigationContainer>
+                <Main.Screen name="RecentGames" component={RecentGames} />
+                <Main.Screen name="Game" component={Game} />
+            </Main.Navigator>
     )
 }
 export default MainStackScreen

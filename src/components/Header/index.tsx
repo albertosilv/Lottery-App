@@ -1,11 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import styles from './style'
-const Header:React.FC = () => {
+const Header = () => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>TGL</Text>
-            <View style={styles.border}></View>
+        <View>
+            <Text></Text>
         </View>
     )
 }
