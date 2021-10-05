@@ -7,8 +7,8 @@ import Header from '../../components/Header'
 import ButtonIcon from '../../components/ButtonIcon'
 import styles from './style'
 import { colors } from '../../config/Color'
-
-const Login: React.FC = () => {
+import {Screen} from '../../Interface/index'
+const Login: React.FC<Screen> = ({navigation}) => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     function handleLogin() {
@@ -23,7 +23,7 @@ const Login: React.FC = () => {
                 <Input value={password} onChange={setPassword} placeholder="Password" secureTextEntry={true} />
                 <ButtonIcon iconSize={40} text="Log In" color={colors.PRIMARY_COLOR} press={handleLogin} position={false} />
             </Card>
-            <ButtonIcon iconSize={40} text="Sign Up" color={colors.SECONDARY_COLOR} press={handleLogin} position={false} />
+            <ButtonIcon iconSize={40} text="Sign Up" color={colors.SECONDARY_COLOR} press={()=>navigation.navigate('Registration')} position={false} />
         </View>
     )
 }

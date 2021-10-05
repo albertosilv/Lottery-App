@@ -12,3 +12,6 @@ export interface ButtonIconProps{
     press:Function,
     position:boolean
 }
+export interface Screen{
+    navigation:any
+}

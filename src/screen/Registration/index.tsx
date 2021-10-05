@@ -7,8 +7,8 @@ import Header from '../../components/Header'
 import ButtonIcon from '../../components/ButtonIcon'
 import styles from './style'
 import { colors } from '../../config/Color'
-
-const Registration: React.FC = () => {
+import { Screen } from '../../Interface'
+const Registration: React.FC<Screen> = ({navigation}) => {
     const [name, setName] = useState<string>('')
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
@@ -18,14 +18,14 @@ const Registration: React.FC = () => {
     return (
         <View style={styles.container}>
             <Header />
-            <Text style={styles.text}>Authentication</Text>
+            <Text style={styles.text}>Registration</Text>
             <Card>
                 <Input value={name} onChange={setName} placeholder="Name" secureTextEntry={false} />
                 <Input value={email} onChange={setEmail} placeholder="Email" secureTextEntry={false} />
                 <Input value={password} onChange={setPassword} placeholder="Password" secureTextEntry={true} />
                 <ButtonIcon iconSize={40} text="Register" color={colors.PRIMARY_COLOR} press={handleLogin} position={false} />
             </Card>
-            <ButtonIcon iconSize={40} text="Back" color={colors.SECONDARY_COLOR} press={handleLogin} position={false} />
+            <ButtonIcon iconSize={40} text="Back" color={colors.SECONDARY_COLOR} press={()=>navigation.navigate('Login')} position={true} />
         </View>
     )
 }
