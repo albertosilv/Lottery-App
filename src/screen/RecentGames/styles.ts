@@ -1,17 +1,32 @@
 import { StyleSheet } from 'react-native'
 import { colors } from '../../config/Color'
 const styles = StyleSheet.create({
-    container:{
+    wrapper:{
         flex:1,
+        flexDirection:'column',
         backgroundColor:'#F7F7F7',
-        justifyContent: 'center',
-        alignItems:'center'
+        marginTop:20,
+        justifyContent:'space-between'
     },
-    text:{
+    container:{
+        paddingLeft:20,
+    },
+    textPrimary:{
         color:colors.SECONDARY_COLOR,
-        fontSize:30,
+        fontSize:20,
         fontWeight:'700',
-        padding:30
+        textTransform:'uppercase',
+        paddingBottom:10,
+    },
+    textSecundary:{
+        color:colors.SECONDARY_COLOR,
+        fontSize:15,
+        fontWeight:'600',
+        paddingBottom:10,
+    },
+    buttonContainer:{
+        flexDirection:'row',
     }
+
 })
 export default styles

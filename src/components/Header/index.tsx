@@ -1,10 +1,11 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import styles from './style'
+import TGL from '../TGL'
 const Header = () => {
     return (
-        <View>
-            <Text></Text>
+        <View style={styles.container}>
+            <TGL fontSize={30}/>
         </View>
     )
 }

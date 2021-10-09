@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import Button from '../../components/Button'
 import Input from '../../components/Input'
 import Card from '../../components/Card'
-import Header from '../../components/Header'
+import TGL from '../../components/TGL'
 import ButtonIcon from '../../components/ButtonIcon'
 import styles from './style'
 import { colors } from '../../config/Color'
 import { Screen } from '../../Interface/index'
+import { User } from '../../Interface/index'
 const Login: React.FC<Screen> = ({ navigation }) => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
@@ -16,7 +16,7 @@ const Login: React.FC<Screen> = ({ navigation }) => {
     }
     return (
         <View style={styles.container}>
-            <Header />
+            <TGL />
             <Text style={styles.text}>Authentication</Text>
             <Card>
                 <Input value={email} onChange={setEmail} placeholder="Email" secureTextEntry={false} />
