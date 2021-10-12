@@ -42,3 +42,10 @@ export interface User {
     token: string,
     email: string,
 }
+
+export interface Item{
+    id:number,
+    numbers:string,
+    data:Date,
+    type:GameProps
+}

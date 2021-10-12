@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         backgroundColor:'#F7F7F7',
         marginTop:20,
-        justifyContent:'space-between'
     },
     container:{
+        marginTop:10,
         paddingLeft:20,
     },
     textPrimary:{

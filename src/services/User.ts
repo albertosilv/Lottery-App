@@ -4,18 +4,19 @@ import { GameProps,User } from '../Interface'
 
 export const getUser = async (data:any) => {
         try {
-            const response: any = (await api.post<AxiosResponse>('/login', data)).data
+            console.log(data)
+            const response: any = (await api.post<AxiosResponse<User>>('/login', data)).data
             const user: User = {
-                name: response?.user?.name,
+                name: response.user?.name,
                 id: response?.user?.id,
                 token: response?.token?.token,
                 email: response?.user?.email,
             }
-            return user
+            return user as User
 
 
         } catch (err) {
-            const error: AxiosError = err
-            console.log(error)
+            const error = err as AxiosError
+            console.log(error.response?.data)
         }
 }

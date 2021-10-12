@@ -19,7 +19,7 @@ export const getGame = async () => {
         })
         return data
     } catch (err) {
-        const error: AxiosError = err
+        const error: AxiosError = err as AxiosError
         console.log(error)
     }
 }

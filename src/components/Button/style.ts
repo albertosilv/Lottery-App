@@ -5,15 +5,24 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'center',
         alignItems:'center',
-        paddingVertical:10,
+        paddingVertical:12,
         paddingHorizontal:22,
         borderRadius:20,
-        marginLeft:5,
+        marginLeft:2,
+    },
+    textContainer:{
+        display:'flex',
+        flexDirection:'row'
     },
     text:{
         fontSize:16,
         fontWeight:'700',
         textAlign:'center'
+    },
+    sob:{
+        lineHeight: 12,
+        fontWeight:'700',
+        color:'#fff'
     }
 })
 
